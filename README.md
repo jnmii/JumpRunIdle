@@ -1,3 +1,6 @@
 # JumpRunIdle
-A Platform Game to test javascript, HTML, and CSS game development in Visual Studios
-![Untitled (1)](https://github.com/jnmii/JumpRunIdle/assets/125529805/f340306a-dd6a-42e4-9b7b-c2e022ae4af3)
+A 'point and shoot' game to test javascript, HTML, and CSS game development in Visual Studios
+
+
+
+![Screenshot 2023-09-20 094709](https://github.com/jnmii/JumpRunIdle/assets/125529805/a9c57a03-5201-497b-a855-db6009438083)
