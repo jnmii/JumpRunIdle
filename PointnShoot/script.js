@@ -35,7 +35,7 @@ class Ghost {
         this.height = this.spriteHeight * this.sizeMod;
         this.x = canvas.width;
         this.y = Math.random() * (canvas.height - this.height);
-        this.directionX = Math.random() * 5 + 3;
+        this.directionX = Math.random() * 7 + 6;
         this.directionY = Math.random() * 5 - 2.5;
         this.markedForDelete = false;
         this.image = new Image();
@@ -131,10 +131,11 @@ function drawScore() {
 
 function drawGameOver() {
     ctx.textAlign = 'center';
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     ctx.fillText('GAME OVER, Score: ' + score, canvas.width / 2, canvas.height / 2);
   
-    
+    // Show the restart button
+  restartButton.style.display = 'block';
 }
 
 window.addEventListener('click', function (e) {
@@ -153,6 +154,27 @@ window.addEventListener('click', function (e) {
         }
     })
 });
+
+restartButton.addEventListener('click', (e) => {
+    // Reset game variables
+    score = 0;
+    gameOver = false;
+    ghosts = [];
+    explosions = [];
+    
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    collisionCtx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Start the game again
+    animate(0);
+    
+    // Hide the restart button
+    restartButton.style.display = 'none';
+    console.log('button pressed')
+  });
+
+  
 
 function createAnimation(e) {
     console.log(explosions);

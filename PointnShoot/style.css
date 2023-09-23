@@ -29,3 +29,24 @@ html {
 #collisionCanvas{
     opacity: 0;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #restartButton {
+    padding: 20px 40px; /* Adjust padding to make the button larger */
+    font-size: 24px; /* Adjust font size if needed */
+    background-color: #4CAF50; /* Add a background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #restartButton:hover {
+    background-color: #45a049; /* Change the background color on hover */
+  }
